@@ -17,14 +17,18 @@ todo_list_fullstack/
 └── README.md
 ```
 ---
+## 📍 Требования к запуску
+- Установленный node.js (проект запускался на версии 22)
+- Docker Desktop (для сборки образа и запуска контейнера с MongoDB)
+---
 ## 🧩 Инструкция по запуску
-1. Клонируйте репозиторий: `https://github.com/novachrono33/todo_list_fullstack.git`.
+1. Клонируйте репозиторий: `git clone https://github.com/novachrono33/todo_list_fullstack.git`.
 2. Создайте файл `.env` в директории `server` и наполните его следующим содержимым:
 ```
 MONGODB_URI=mongodb://localhost:27017/todolist
 PORT=5000
 ```
-3. Убедитесь, что Docker Desktop запущен (Windows) и выполните команду: `docker-compose up -d`.
+3. Убедитесь, что Docker Desktop запущен (Windows) и выполните команду: `docker-compose up -d`, находясь в директории `server`.
 4. Скачайте пакеты и запустите сервер (в отдельном терминале):
 ```
 cd server
@@ -39,6 +43,8 @@ npm run dev
 ```
 6. Откройте приложение в браузере по адресу http://localhost:3000
 ---
+## 💡 Для дальнейшей работы
+Убедитесь, что контейнер `todo-mongo` запущен (если это не так, запустите его вручную). В отдельных консолях из директорий `server` и `client` выполните команду `npm run dev`.
 ## 🖥️ Скриншоты
 Форма добавления задачи, активные задачи
 <img width="1909" height="939" alt="image" src="https://github.com/user-attachments/assets/cb82eea5-3ba6-4ee5-bd40-3e5be6c4ce1e" />
