@@ -1,0 +1,20 @@
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: todo-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_DATABASE=todolist
+    volumes:
+      - mongodb_data:/data/db
+    command: ["--bind_ip_all"]
+    
+volumes:
+  mongodb_data:
+    driver: local
+
+networks:
+  default:
+    name: todo-network
